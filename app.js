@@ -1,6 +1,5 @@
-// TODO research the data for the versions, rename with more suitable variable name, & add to my webst samples on Stack Overflow, maybe Angel, and definitely busn and personal wordpress sites
+// TODO add to my webst samples on Stack Overflow, maybe Angel, and definitely busn and personal wordpress sites
 // TODO deploy the finished remake of udemy course project to a page on business site and my own profile site; add screenshots to portfolio homepage
-// TODO try to make a sub list that appears under JS for all the various popular and fallen frameworks/libraries - start with the popular ones and add webscraped complete list later, with toggle to show and hide
 
 var htmlVersion = [
   // according to w3schools.com
@@ -40,7 +39,7 @@ var colours = {
 };
 
 // grab the list with id=html_version_list to work with data above, using D3
-d3.select("#html_version_list")
+d3.select("#versions")
     .style("list-style", "none")
     .style("padding-left", "0")
   .selectAll("li")
@@ -49,7 +48,7 @@ d3.select("#html_version_list")
   .data(htmlVersion)
   .enter()
 
-  // add <li> elements for each quote
+  // add <li> elements for each version
   .append("li")
     .text(function(d) {
       // formatted version + highlight quote + year
@@ -73,7 +72,7 @@ d3.select("#html_version_list")
 // style the elements in the entire page
 d3.select(".title")
     .style("text-align", "center");
-d3.selectAll("p, #html_version_list")
+d3.selectAll("p, #versions")
     .style("margin", "20px 10%");
 d3.selectAll("body")
     .style("font-family", "Arial");
